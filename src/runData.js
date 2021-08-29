@@ -59,6 +59,11 @@ function test2(){
     postReceta(datos,imagen);
 }
 
+async function getLink(documentId){
+    var gsReference = storage.refFromURL('gs://cookingbook-70bd6.appspot.com/splash_images/'+documentId+'.jpg');
+    return await gsReference.getDownloadURL();
+}
+
 function postReceta(data, imagen){
     if( data.autor !== undefined && 
         data.categoria !== undefined &&
@@ -108,11 +113,14 @@ async function getRecetas(){
     });
 }
 
-function getCategorias(){
-    db.collection("categorias").get().then((querySnapshot) => {
+async function getCategorias(){
+    return await db.collection("categorias").get().then((querySnapshot) => {
+        result = [];
         querySnapshot.forEach((doc) => {
             console.log(doc.id, doc.data());
+            result.push({id: doc.id, data: doc.data()});
         });
+        return result;
     });
 
 }
