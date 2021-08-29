@@ -1,0 +1,98 @@
+body{
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+p{
+  color: black;
+}
+
+.StyledRecipe{
+  width: 80%;
+  padding-top: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
+	line-height: 1.5;
+	font-weight: 400;
+  text-align: center;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: bold;
+	line-height: 1.5;
+	font-weight: 400;
+  text-align: left;
+}
+
+h3{
+  font-size: 18px;
+  font-weight: bold;
+	line-height: 1.5;
+	font-weight: 400;
+  text-align: left;
+}
+
+.StyledSlider{
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+
+.StyleSliderItem{
+  flex: 0 0 auto;
+  object-fit: none;
+  position: relative;
+  margin: 15px;
+  width: 200px;
+  height: 200px;
+}
+
+.StyledPictureContainer{
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg');
+}
+
+.checked {
+  color: orange;
+}
+
+.GridRecipes{
+  padding-top: 30px;
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  grid-template-rows: auto auto;
+  margin: auto;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+}
+@media only screen and (min-width: 1400px){
+  .GridRecipes{
+    grid-template-columns: repeat(4, 1fr);
+    height: 130px;
+  }
+}
+
+.GridItems{
+  width: 100%;
+  height: 100%;
+}

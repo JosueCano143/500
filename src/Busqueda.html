@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "../styles/styledBusqueda.css">
+     <script src = "Ingredientes.js"></script>
+    <script src = "Categoria.js"></script>
+    <title>Science Food</title>
+  </head>
+
+  <body>
+    <div class = "StyledSearch">
+      <div class = "">
+        <i class="glyphicon glyphicon-search"></i>
+        <input class = "SearchInput"></input>
+      </div>
+
+      <div class = "GridBusquedas">
+
+        <div class = "GridItems"> 
+          <div class = "buttonDrop"><button class = "button" onclick = "showIngredients();">INGREDIENTES</button></div>
+            <div class = "StyledSlider">  
+              <ol class = "List" id = "resultIngredientes"></ol>
+          </div>
+        </div>
+
+        <div class = "GridItems">
+          <div class = "buttonDrop"><button class = "button" onclick = "showCategoria();">CATEGORIA</button></div>
+            <div class = "StyledSlider">  
+              <ol class = "List" id = "resultCategoria"></ol>
+            </div>
+        </div>
+
+      </div>
+      <div class = "submitButton">¡Empezar a cocinar!</div>
+
+      <div class = "GridImages">
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+        <div class = "GridItems"><div class = "StyledPictureContainer"></div></div>
+      </div>
+    </div>
+  </body>
+</html>
