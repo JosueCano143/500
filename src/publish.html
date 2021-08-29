@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SmartFood</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="css/publish.css">
+</head>
+<body>
+<div class="container">
+  <form>
+    <div class="row">
+      <h4>Nombre de la receta</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Nombre de la receta"/>
+        <div class="input-icon"><i class="fa fa-file"></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Tiempo</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="number" placeholder="Minutos"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Dificultad</h4>
+        <div class="input-group">
+          <input type="radio" name="level" value="easy" id="easy"/>
+          <label for="easy">Principiante</label>
+          <input type="radio" name="level" value="difficult" id="difficult"/>
+          <label for="difficult">Avanzado</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Porciones</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="number" placeholder="Porciones"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Categoría</h4>
+        <div class="input-group">
+          <input type="radio" name="category" value="fruits" id="fruits"/>
+          <label for="fruits">Frutas</label>
+          <input type="radio" name="category" value="vegetables" id="vegetables"/>
+          <label for="vegetables">Verduras</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Procedimiento</h4>
+      <div class="input-group input-group-icon">
+        <input type="textarea" placeholder="Ingredientes"/>
+        <div class="input-icon"><i class="fa fa-list-alt"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="textarea" placeholder="Procedimiento"/>
+        <div class="input-icon"><i class="fa fa-coffee"></i></div>
+      </div>
+      <div class="col-half">
+        <div class="input-group input-group-icon">
+          <input type="file"/>
+          <div class="input-icon"><i class="fa fa-file"></i></div>
+        </div>
+      </div>
+      <div class="col-half">
+        <div class="input-group">
+          <select>
+            <option>Calorías</option>
+            <option><500</option>
+            <option>>500 & <1000</option>
+            <option>>1000</option>
+          </select>
+          <select>
+            <option>Proteínas</option>
+            <option><100gr</option>
+            <option>100gr - 300gr</option>
+            <option>>300gr</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-half">
+        <div class="input-group">
+          <select>
+            <option>Grasas</option>
+            <option><100gr</option>
+            <option>100gr - 300gr</option>
+            <option>>300gr</option>
+          </select>
+          <select>
+            <option>Carbohidratos</option>
+            <option><100gr</option>
+            <option>100gr - 300gr</option>
+            <option>>300gr</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Términos y condiciones</h4>
+      <div class="input-group">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">Cedo los derechos de autor a Smart Food para la  publicación de esta receta en su sitio oficial</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-group">
+        <input type="submit" style="background-color:#7ed321; color:blanchedalmond; font-weight: 800; font-size: 146x" id="terms"/>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
