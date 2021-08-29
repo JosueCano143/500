@@ -179,3 +179,8 @@ h3{
 .container .checkmark:after {
   display: block;
 }
+
+.searchButton{
+  background: unset;
+  border-style: unset;
+}
