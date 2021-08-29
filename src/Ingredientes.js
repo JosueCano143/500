@@ -1,26 +1,16 @@
 var isClicked = 0;
+var facts;
 async function showIngredients(){
 
-  const facts =
-  ['<label class="container">Coffee<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Tea<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>',
-    '<label class="container">Water<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>'
-  ];
-
+  if (facts == null){
+    const lol = await getIngredientes();
+    var res = [];
+    await lol.forEach((doc) => {
+      res.push('<label class="container">'+doc.data.nombre+'<input type="checkbox" checked="checked"><span class="checkmark"></span><li id = "resultIngredientes"></li></label>');
+    });
+    facts = res;
+  }
+  
   const result = document.getElementById('resultIngredientes');
 
   if(isClicked % 2 == false){
