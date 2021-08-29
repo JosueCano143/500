@@ -6,7 +6,7 @@ async function showBusqueda(){
     var res = [];
     await lol.forEach(async (doc) => {
           const link = await getLink(doc.id);
-          res.push('<div class = "GridItems" style = "background-image: url(\'' + link + '\')"><div class = "StyledPictureContainer"></div></div>');
+          res.push('<div class = "GridItems StyledPictureContainer" style = "background-image: url(\'' + link + '\')"><div class = "StyledPictureContainer"></div></div>');
       });
     imagenes = res;
     console.log(res);

@@ -64,6 +64,8 @@ async function getLink(documentId){
     return await gsReference.getDownloadURL();
 }
 
+
+
 function postReceta(data, imagen){
     if( data.autor !== undefined && 
         data.categoria !== undefined &&
@@ -122,7 +124,6 @@ async function getCategorias(){
         });
         return result;
     });
-
 }
 
 /**
@@ -133,6 +134,26 @@ async function getCategorias(){
  */
 async function getRecetasPorCategoria(categoria){
     return await db.collection("recetas").where("categoria","==",categoria).get()
+    .then((querySnapshot) => {
+        result = [];
+        querySnapshot.forEach((doc) => {
+            result.push({id: doc.id, data: doc.data()})
+        });
+        return result;
+    });
+}
+
+/**
+ * Busca las recetas que tengan la categoria dada
+ * @async
+ * @param {String} prefix el nombre de la categoria
+ * @return  {Array<{id,data}>} id del documento, datos del documento
+ */
+ async function getRecetasPorNombre(prefix){
+    return await db.collection("recetas")
+    .where("nombre",">=",categoria)
+    .where("nombre","<",prefix+'z')
+    .get()
     .then((querySnapshot) => {
         result = [];
         querySnapshot.forEach((doc) => {
